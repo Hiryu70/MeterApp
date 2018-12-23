@@ -4,7 +4,7 @@
 	{
 		public MeterControl()
 		{
-			this.InitializeComponent();
+			InitializeComponent();
 		}
 	}
 }

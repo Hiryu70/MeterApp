@@ -3,14 +3,17 @@ using System.Collections.Generic;
 
 namespace MeterApp
 {
-	class MetersManager
+	internal sealed class MetersManager
 	{
 		public MetersManager()
 		{
 			UpdateMetersCommand = new RelayCommand(UpdateMeters);
+			UpdateMeters();
 		}
 
 		public RelayCommand UpdateMetersCommand { get; set; }
+
+		public string Title { get; set; } = "Счетчики";
 
 		public List<MeterVm> Meters { get; set; } = new List<MeterVm>();
 
@@ -18,16 +21,20 @@ namespace MeterApp
 		{
 			Meters.Clear();
 
-			MeterVm meter1 = new MeterVm();
-			meter1.Name = "Meter1";
-			meter1.DeviceType = DeviceType.Zigbee;
-			meter1.Service = ServiceCategory.Electric;
+			var meter1 = new MeterVm
+			{
+				Name = "Meter1",
+				DeviceType = DeviceType.Zigbee,
+				Service = ServiceCategory.Electric
+			};
 			Meters.Add(meter1);
 
-			MeterVm meter2 = new MeterVm();
-			meter2.Name = "Meter2";
-			meter2.DeviceType = DeviceType.Gsm;
-			meter2.Service = ServiceCategory.Water;
+			var meter2 = new MeterVm
+			{
+				Name = "Meter2",
+				DeviceType = DeviceType.Gsm,
+				Service = ServiceCategory.Water
+			};
 			Meters.Add(meter2);
 		}
 	}

@@ -5,7 +5,25 @@
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	xmlns:local="using:MeterApp"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	d:DataContext="{d:DesignInstance local:MetersManager,
+	                                 IsDesignTimeCreatable=False}"
 	mc:Ignorable="d">
 
-	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" />
+	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		<!--<Grid.Resources>
+			<ResourceDictionary>
+				<DataTemplate x:Key="MeterTemplate" x:DataType="local:MeterVm">
+					<local:MeterControl />
+				</DataTemplate>
+			</ResourceDictionary>
+		</Grid.Resources>-->
+
+		<GridView ItemsSource="{Binding Meters}">
+			<GridView.ItemTemplate>
+				<DataTemplate>
+					<local:MeterControl />
+				</DataTemplate>
+			</GridView.ItemTemplate>
+		</GridView>
+	</Grid>
 </Page>

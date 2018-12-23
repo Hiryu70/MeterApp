@@ -1,13 +1,11 @@
-﻿using Windows.UI.Xaml.Controls;
-
-namespace MeterApp
+﻿namespace MeterApp
 {
-	public sealed partial class MainPage : Page
+	public sealed partial class MainPage
 	{
 		public MainPage()
 		{
-			this.InitializeComponent();
-			this.DataContext = new MeterControl();
+			InitializeComponent();
+			DataContext = new MetersManager();
 		}
 	}
 }
