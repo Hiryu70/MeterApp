@@ -1,18 +1,17 @@
 ﻿<UserControl
-    x:Class="MeterApp.MeterControl"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:MeterApp"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-	  d:DataContext="{d:DesignInstance local:MeterVm,
-																							IsDesignTimeCreatable=False}"
-    d:DesignHeight="300"
-    d:DesignWidth="400">
+	x:Class="MeterApp.MeterControl"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local="clr-namespace:MeterApp"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	d:DataContext="{d:DesignInstance local:MeterVm,
+	                                 IsDesignTimeCreatable=False}"
+	d:DesignHeight="300"
+	d:DesignWidth="400"
+	mc:Ignorable="d">
 
-    <Grid>
-			<TextBlock Text="{Binding Path=Name}"></TextBlock>
-			
-    </Grid>
+	<Grid>
+		<TextBlock Text="{Binding Path=Name}" />
+	</Grid>
 </UserControl>
