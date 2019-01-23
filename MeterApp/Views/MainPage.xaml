@@ -1,0 +1,28 @@
+﻿<Page x:Class="MeterApp.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:viewModels="using:MeterApp.ViewModels">
+
+    <Page.DataContext>
+        <viewModels:MainPageViewModel />
+    </Page.DataContext>
+
+    <Page.Resources>
+        <DataTemplate x:Key="ElectricTemplate" x:DataType="viewModels:ElectricMeterViewModel">
+            <Grid Background="Gold">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="{Binding Path=Name}" />
+                <TextBlock Grid.Row="1" Text="{Binding Path=Electricity}" />
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button Command="{Binding UpdateMetersCommand}" Content="Update meters" />
+        <ListBox x:Name="MetersGridView"
+                  ItemsSource="{Binding Meters, UpdateSourceTrigger=PropertyChanged}" ItemTemplate="{StaticResource GasTemplate}" />
+    </StackPanel>
+</Page>
