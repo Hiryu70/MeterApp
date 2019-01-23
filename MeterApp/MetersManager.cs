@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight.Command;
 using System.Collections.Generic;
+using MeterApp.ViewModels;
 
 namespace MeterApp
 {
@@ -13,27 +14,23 @@ namespace MeterApp
 
 		public RelayCommand UpdateMetersCommand { get; set; }
 
-		public string Title { get; set; } = "Счетчики";
+		public string Title { get; set; } = "Meters";
 
-		public List<MeterVm> Meters { get; set; } = new List<MeterVm>();
+		public List<BaseMeterViewModel> Meters { get; set; } = new List<BaseMeterViewModel>();
 
 		private void UpdateMeters()
 		{
 			Meters.Clear();
 
-			var meter1 = new MeterVm
+			var meter1 = new ElectricMeterViewModel()
 			{
-				Name = "Meter1",
-				DeviceType = DeviceType.Zigbee,
-				Service = ServiceCategory.Electric
+				Name = "ElectricMeter1",
 			};
 			Meters.Add(meter1);
 
-			var meter2 = new MeterVm
+			var meter2 = new GasMeterViewModel
 			{
-				Name = "Meter2",
-				DeviceType = DeviceType.Gsm,
-				Service = ServiceCategory.Water
+				Name = "GasMeter1",
 			};
 			Meters.Add(meter2);
 		}

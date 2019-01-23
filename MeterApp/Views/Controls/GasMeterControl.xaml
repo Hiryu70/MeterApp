@@ -1,0 +1,18 @@
+﻿<UserControl
+    x:Class="MeterApp.Views.Controls.GasMeterControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:MeterApp.ViewModels"
+    d:DataContext="{d:DesignInstance viewModels:GasMeterViewModel,
+                                     IsDesignTimeCreatable=False}"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    mc:Ignorable="d">
+
+    <Grid Background="Green">
+        <TextBlock Text="{Binding Path=Name}" />
+        <TextBlock Text="{Binding Path=Gas}" />
+    </Grid>
+</UserControl>

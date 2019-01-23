@@ -99,9 +99,15 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MetersManager.cs" />
-    <Compile Include="MeterVm.cs" />
-    <Compile Include="MeterControl.xaml.cs">
-      <DependentUpon>MeterControl.xaml</DependentUpon>
+    <Compile Include="ViewModels\ElectricMeterViewModel.cs" />
+    <Compile Include="ViewModels\BaseMeterViewModel.cs" />
+    <Compile Include="ViewModels\GasMeterViewModel.cs" />
+    <Compile Include="Model\ServiceCategory.cs" />
+    <Compile Include="Views\Controls\GasMeterControl.xaml.cs">
+      <DependentUpon>GasMeterControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\ElectricMeterControl.xaml.cs">
+      <DependentUpon>ElectricMeterControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -130,7 +136,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MeterControl.xaml">
+    <Page Include="Views\Controls\GasMeterControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\ElectricMeterControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
