@@ -1,4 +1,4 @@
-﻿namespace MeterApp
+﻿namespace MeterApp.Resources
 {
     public sealed partial class Templates
     {

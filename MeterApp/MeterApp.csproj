@@ -107,6 +107,7 @@
     <Compile Include="ViewModels\GasMeterViewModel.cs" />
     <Compile Include="Model\ServiceCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\CustomDataTemplateSelector.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

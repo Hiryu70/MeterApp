@@ -1,19 +1,8 @@
 ﻿<ResourceDictionary
-    x:Class="MeterApp.Templates"
+    x:Class="MeterApp.Resources.Templates"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:viewModels="using:MeterApp.ViewModels">
-
-    <DataTemplate x:Key="BaseTemplate" x:DataType="viewModels:BaseMeterViewModel">
-        <Grid Background="Gold">
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Text="{Binding Path=Name}" />
-            <TextBlock Grid.Row="1" Text="{Binding Path=Electricity}" />
-        </Grid>
-    </DataTemplate>
 
     <DataTemplate x:Key="ElectricTemplate" x:DataType="viewModels:ElectricMeterViewModel">
         <Grid Background="Gold">

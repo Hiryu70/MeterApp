@@ -4,6 +4,6 @@
     {
         public string Name { get; set; }
 
-        public ServiceCategory Service { get; protected set; }
+        public ServiceCategory Service { get; set; }
     }
 }
