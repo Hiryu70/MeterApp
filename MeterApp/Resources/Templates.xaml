@@ -5,24 +5,28 @@
     xmlns:viewModels="using:MeterApp.ViewModels">
 
     <DataTemplate x:Key="ElectricTemplate" x:DataType="viewModels:ElectricMeterViewModel">
-        <Grid Background="Gold">
+        <Grid Background="Gold" Width="300">
             <Grid.RowDefinitions>
                 <RowDefinition />
                 <RowDefinition />
+                <RowDefinition />
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Text="{Binding Path=Name}" />
-            <TextBlock Grid.Row="1" Text="{Binding Path=Electricity}" />
+            <TextBlock Grid.Row="0" Text="Electric Meter"/>
+            <TextBlock Grid.Row="1" Text="{Binding Path=Name}" />
+            <TextBlock Grid.Row="2" Text="{Binding Path=Electricity}" />
         </Grid>
     </DataTemplate>
 
     <DataTemplate x:Key="GasTemplate" x:DataType="viewModels:GasMeterViewModel">
-        <Grid Background="Green">
+        <Grid Background="Green" Width="300">
             <Grid.RowDefinitions>
                 <RowDefinition />
                 <RowDefinition />
+                <RowDefinition />
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Text="{Binding Path=Name}" />
-            <TextBlock Grid.Row="1" Text="{Binding Path=Gas}" />
+            <TextBlock Grid.Row="0" Text="Gas Meter"/>
+            <TextBlock Grid.Row="1" Text="{Binding Path=Name}" />
+            <TextBlock Grid.Row="2" Text="{Binding Path=Gas}" />
         </Grid>
     </DataTemplate>
 

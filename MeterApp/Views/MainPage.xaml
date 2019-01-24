@@ -18,7 +18,7 @@
                 Content="Update meters" />
 
         <ListBox ItemTemplateSelector="{StaticResource CustomDataTemplateSelector}"
-                 ItemsSource="{Binding Meters, UpdateSourceTrigger=PropertyChanged}" />
+                 ItemsSource="{Binding Meters}" />
 
     </StackPanel>
 </Page>

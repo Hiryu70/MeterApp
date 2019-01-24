@@ -24,14 +24,14 @@ namespace MeterApp.ViewModels
             var random = new Random();
             var meter1 = new ElectricMeterViewModel()
             {
-                Name = "ElectricMeter1",
+                Name = "Meter1",
                 Electricity = random.Next(0, 100)
             };
             Meters.Add(meter1);
 
             var meter2 = new GasMeterViewModel
             {
-                Name = "GasMeter1",
+                Name = "Meter2",
                 Gas = random.Next(0, 100)
             };
             Meters.Add(meter2);
